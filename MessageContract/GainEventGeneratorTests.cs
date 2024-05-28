@@ -1,0 +1,70 @@
+﻿using PactNet.Verifier;
+using System.Text.Json;
+
+namespace MessageContract.Tests;
+
+public class GainEventGeneratorTests : IDisposable
+{
+    private readonly PactVerifier _verifier;
+
+    public GainEventGeneratorTests()
+    {
+        _verifier = new PactVerifier("Gain");
+    }
+
+    public void Dispose()
+    {
+        // make sure you dispose the verifier to stop the internal messaging server
+        GC.SuppressFinalize(this);
+        _verifier.Dispose();
+    }
+
+    [Fact]
+    public void EnsureEventApiHonorsPactWithConsumer()
+    {
+        string pactPath = Path.Combine("..", "..", "..", "..",
+          "pacts",
+          "OperationTracking-Gain.json");
+        if (!File.Exists(pactPath))
+        {
+            throw new ArgumentException(pactPath);
+        }
+
+        var defaultSettings = new JsonSerializerOptions
+        {
+            PropertyNamingPolicy = JsonNamingPolicy.CamelCase
+        };
+        Dictionary<string, List<object>> actualGroupByMessagesWithType = Steps.PrepareData("ActualMessagesForTesting.json");
+        ICollection<string> messageTypes = actualGroupByMessagesWithType.Keys;
+
+
+        _verifier
+        .WithMessages(scenarios =>
+        {
+            foreach (string messageType in messageTypes)
+            {
+                Type eventType = EventTypeMapper.GetTypeForEventName(messageType);
+
+                if (!actualGroupByMessagesWithType.TryGetValue(messageType, out List<object>? actualGroupedMsgs))
+                {
+                    throw new Exception($"No matching expected message group found");
+                }
+                scenarios
+                    .Add($"{eventType.Name} Message from Gain for the feed upload request", builder =>
+                    {
+                        builder
+                        .WithMetadata(new
+                        {
+                            ContentType = "application/json",
+                            Key = "valueKey"
+                        })
+                    .WithContent(() => actualGroupedMsgs);
+
+                    });
+            }
+
+        }, defaultSettings)
+        .WithFileSource(new FileInfo(pactPath))
+        .Verify();
+    }
+}

@@ -1,0 +1,590 @@
+{
+  "consumer": {
+    "name": "OperationTracking"
+  },
+  "interactions": [
+    {
+      "contents": {
+        "content": [
+          {
+            "businessObjectReference": {
+              "dataType": "Party",
+              "discriminator": null,
+              "domain": "Golden",
+              "id": 123,
+              "model": "SimCorpDimension",
+              "version": 1
+            },
+            "correlationId": "aa",
+            "discriminator": "Master",
+            "title": "GP_5232",
+            "workflowId": 123,
+            "workflowType": 0
+          }
+        ],
+        "contentType": "application/json",
+        "encoded": false
+      },
+      "description": "WorkflowChangedBusinessObject Message from Gain for the feed upload request",
+      "matchingRules": {
+        "body": {
+          "$": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type",
+                "min": 1
+              }
+            ]
+          },
+          "$[*].businessObjectReference": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          },
+          "$[*].correlationId": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          },
+          "$[*].title": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "include",
+                "value": "GP_5232"
+              }
+            ]
+          },
+          "$[*].workflowId": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "number"
+              }
+            ]
+          },
+          "$[*].workflowType": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          }
+        }
+      },
+      "metadata": {
+        "key": "valueKey"
+      },
+      "pending": false,
+      "providerStates": [
+        {
+          "name": "WorkflowChangedBusinessObject events are pushed to the queue"
+        }
+      ],
+      "type": "Asynchronous/Messages"
+    },
+    {
+      "contents": {
+        "content": [
+          {
+            "businessObjectReference": {
+              "dataType": "Party",
+              "discriminator": null,
+              "domain": "Golden",
+              "id": 123,
+              "model": "SimCorpDimension",
+              "version": 1
+            },
+            "correlationId": "aa",
+            "discriminator": "Master",
+            "title": "GP_5232",
+            "workflowId": 123,
+            "workflowType": 0
+          }
+        ],
+        "contentType": "application/json",
+        "encoded": false
+      },
+      "description": "WorkflowChangedBusinessObject Message from Gain for the feed upload request",
+      "matchingRules": {
+        "body": {
+          "$": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type",
+                "min": 1
+              }
+            ]
+          },
+          "$[*].businessObjectReference": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          },
+          "$[*].correlationId": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          },
+          "$[*].title": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "include",
+                "value": "GP_5232"
+              }
+            ]
+          },
+          "$[*].workflowId": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "number"
+              }
+            ]
+          },
+          "$[*].workflowType": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          }
+        }
+      },
+      "metadata": {
+        "key": "valueKey"
+      },
+      "pending": false,
+      "providerStates": [
+        {
+          "name": "WorkflowChangedBusinessObject events are pushed to the queue"
+        }
+      ],
+      "type": "Asynchronous/Messages"
+    },
+    {
+      "contents": {
+        "content": [
+          {
+            "businessObjectReference": {
+              "dataType": "Party",
+              "discriminator": null,
+              "domain": "Golden",
+              "id": 123,
+              "model": "SimCorpDimension",
+              "version": 1
+            },
+            "correlationId": "aa",
+            "discriminator": "Master",
+            "title": "GP_5232",
+            "workflowId": 123,
+            "workflowType": 0
+          }
+        ],
+        "contentType": "application/json",
+        "encoded": false
+      },
+      "description": "WorkflowChangedBusinessObject Message from Gain for the feed upload request",
+      "matchingRules": {
+        "body": {
+          "$": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type",
+                "min": 1
+              }
+            ]
+          },
+          "$[*].businessObjectReference": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          },
+          "$[*].correlationId": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          },
+          "$[*].title": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "include",
+                "value": "GP_5232"
+              }
+            ]
+          },
+          "$[*].workflowId": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "number"
+              }
+            ]
+          },
+          "$[*].workflowType": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          }
+        }
+      },
+      "metadata": {
+        "key": "valueKey"
+      },
+      "pending": false,
+      "providerStates": [
+        {
+          "name": "WorkflowChangedBusinessObject events are pushed to the queue"
+        }
+      ],
+      "type": "Asynchronous/Messages"
+    },
+    {
+      "contents": {
+        "content": [
+          {
+            "ancestry": [],
+            "contextData": {},
+            "correlationId": "sba",
+            "description": "Party from feed Excel-Party [IdBBCompany:abc]",
+            "priority": 2,
+            "startArg": "Aim.Gain.StaticData.DataManagement.BusinessProcess.FreshAggregateRequestBusinessProcessStartArgument",
+            "startsBulkOperation": false,
+            "workflowId": 11,
+            "workflowType": 0
+          }
+        ],
+        "contentType": "application/json",
+        "encoded": false
+      },
+      "description": "WorkflowCreated Message from Gain for the feed upload request",
+      "matchingRules": {
+        "body": {
+          "$": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type",
+                "min": 2
+              }
+            ]
+          },
+          "$[*].ancestry": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          },
+          "$[*].contextData": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          },
+          "$[*].correlationId": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          },
+          "$[*].description": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          },
+          "$[*].priority": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          },
+          "$[*].startArg": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          },
+          "$[*].startsBulkOperation": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          },
+          "$[*].workflowId": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "number"
+              }
+            ]
+          },
+          "$[*].workflowType": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          }
+        }
+      },
+      "metadata": {
+        "key": "valueKey"
+      },
+      "pending": false,
+      "providerStates": [
+        {
+          "name": "WorkflowCreated events are pushed to the queue"
+        }
+      ],
+      "type": "Asynchronous/Messages"
+    },
+    {
+      "contents": {
+        "content": [
+          {
+            "correlationId": "abc",
+            "state": 1,
+            "workflowId": 123,
+            "workflowType": 0
+          }
+        ],
+        "contentType": "application/json",
+        "encoded": false
+      },
+      "description": "WorkflowFinished Message from Gain for the feed upload request",
+      "matchingRules": {
+        "body": {
+          "$": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type",
+                "min": 1
+              }
+            ]
+          },
+          "$[*].correlationId": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          },
+          "$[*].state": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          },
+          "$[*].workflowId": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "number"
+              }
+            ]
+          },
+          "$[*].workflowType": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          }
+        }
+      },
+      "metadata": {
+        "key": "valueKey"
+      },
+      "pending": false,
+      "providerStates": [
+        {
+          "name": "WorkflowFinished events are pushed to the queue"
+        }
+      ],
+      "type": "Asynchronous/Messages"
+    },
+    {
+      "contents": {
+        "content": [
+          {
+            "correlationId": "aa",
+            "workflowId": 123,
+            "workflowType": 0
+          }
+        ],
+        "contentType": "application/json",
+        "encoded": false
+      },
+      "description": "WorkflowReady Message from Gain for the feed upload request",
+      "matchingRules": {
+        "body": {
+          "$": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type",
+                "min": 1
+              }
+            ]
+          },
+          "$[*].correlationId": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          },
+          "$[*].workflowId": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "number"
+              }
+            ]
+          },
+          "$[*].workflowType": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          }
+        }
+      },
+      "metadata": {
+        "key": "valueKey"
+      },
+      "pending": false,
+      "providerStates": [
+        {
+          "name": "WorkflowReady events are pushed to the queue"
+        }
+      ],
+      "type": "Asynchronous/Messages"
+    },
+    {
+      "contents": {
+        "content": [
+          {
+            "correlationId": "aa",
+            "waitingFor": 3,
+            "workflowId": 123
+          }
+        ],
+        "contentType": "application/json",
+        "encoded": false
+      },
+      "description": "WorkflowWaiting Message from Gain for the feed upload request",
+      "matchingRules": {
+        "body": {
+          "$": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type",
+                "min": 1
+              }
+            ]
+          },
+          "$[*].correlationId": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          },
+          "$[*].waitingFor": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          },
+          "$[*].workflowId": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "number"
+              }
+            ]
+          }
+        }
+      },
+      "metadata": {
+        "key": "valueKey"
+      },
+      "pending": false,
+      "providerStates": [
+        {
+          "name": "WorkflowWaiting events are pushed to the queue"
+        }
+      ],
+      "type": "Asynchronous/Messages"
+    }
+  ],
+  "metadata": {
+    "pactRust": {
+      "ffi": "0.4.16",
+      "models": "1.1.19"
+    },
+    "pactSpecification": {
+      "version": "4.0"
+    }
+  },
+  "provider": {
+    "name": "Gain"
+  }
+}

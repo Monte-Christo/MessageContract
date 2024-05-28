@@ -18,6 +18,8 @@
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.9.0" />
     <PackageReference Include="PactNet" Version="5.0.0-beta.2" />
     <PackageReference Include="PactNet.Output.Xunit" Version="1.0.0" />
+    <PackageReference Include="SimCorp.Gain.Messages.Data" Version="2.0.4" />
+    <PackageReference Include="SimCorp.Gain.Messages.System" Version="2.0.4" />
     <PackageReference Include="xunit" Version="2.8.0" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.8.0">
       <PrivateAssets>all</PrivateAssets>
@@ -27,6 +29,18 @@
 
   <ItemGroup>
     <Using Include="Xunit" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="ExpectedMessages.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ActualMessagesForTesting.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ActualMessages.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>
