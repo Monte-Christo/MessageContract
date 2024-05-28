@@ -40,6 +40,7 @@ public class StockEventGeneratorTests : IDisposable
       {
         // register the response to each interaction
         // the descriptions must match those in the pact file(s)
+        // GILA temp comment
         scenarios
           .Add("a single event", () => new StockEvent
           {
