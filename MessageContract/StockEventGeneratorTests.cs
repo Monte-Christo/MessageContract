@@ -5,12 +5,7 @@ namespace MessageContract.Tests;
 
 public class StockEventGeneratorTests : IDisposable
 {
-  private readonly PactVerifier _verifier;
-
-  public StockEventGeneratorTests()
-  {
-    _verifier = new PactVerifier("Stock Event Producer");
-  }
+  private readonly PactVerifier _verifier = new("Stock Event Producer");
 
   public void Dispose()
   {

@@ -15,7 +15,7 @@ public class StockEventProcessorTests
   {
     IPactV4 v4 = Pact.V4("Stock Event Consumer", "Stock Event Producer", new PactConfig
     {
-      PactDir = "../../../../pacts/",
+      PactDir = Path.Combine("..", "..", "..", "..", "pacts"),
       DefaultJsonSettings = new JsonSerializerOptions
       {
         PropertyNamingPolicy = JsonNamingPolicy.CamelCase
