@@ -69,16 +69,16 @@
         "Type": "Scrubbing"
       },
       "Discriminator": "Master",
-      "Data": {
-        "GainPartyId": "123",
-        "Issuer": true,
-        "PartyFreeCode20": "abc",
-        "Party": "GP_5",
-        "PartyName": "GP_5",
-        "ReviewDate": "2024-01-01T00:00:00Z",
-        "BBGCompany": "123",
-        "GainID": "GP_5"
-      },
+      //"Data": {
+      //  "GainPartyId": "123",
+      //  "Issuer": true,
+      //  "PartyFreeCode20": "abc",
+      //  "Party": "GP_5",
+      //  "PartyName": "GP_5",
+      //  "ReviewDate": "2024-01-01T00:00:00Z",
+      //  "BBGCompany": "123",
+      //  "GainID": "GP_5"
+      //},
       "References": [
         {
           "Ref": {
@@ -87,10 +87,11 @@
             "Domain": "Silver",
             "Id": 12,
             "Version": 1
-          }
+          },
+          "Type": "Link"
         }
       ],
-      "Fingerprint": "123",
+      "Fingerprint": "12",
       "Model": "SimCorpDimension",
       "DataType": "Party",
       "Domain": "Golden",

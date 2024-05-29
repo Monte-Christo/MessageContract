@@ -74,41 +74,47 @@ namespace MessageContract.Tests
         private readonly static object businessObjectChangedContent = new
         {
             WorkflowReference = Match.Type(
-                new WorkflowReference()
+                new
                 {
-                    CorrelationId = "ab",
-                    Id = 12,
-                    Type = WorkflowType.Scrubbing,
+                    CorrelationId = Match.Type("ab"),
+                    Id = Match.Number(12),
+                    Type = Match.Type(WorkflowType.Scrubbing),
                 }),
             Discriminator = Match.Type("Master"),
-            Data = Match.Type(new
+            // To Do: Check how to set up Match rule for object type.
+            // The error: Expected property events[0].Data to be a dictionary or collection of key-value pairs that is keyed to type System.String
+            //Data = Match.Type(
+            //    new
+            //    {
+            //        GainPartyId = Match.Type("123"),
+            //        Issuer = Match.Type(true),
+            //        PartyFreeCode20 = Match.Type("abc"),
+            //        Party = Match.Type("GP_5"),
+            //        PartyName = Match.Type("GP_5"),
+            //        ReviewDate = Match.Type("2024-01-01T00:00:00Z"),
+            //        BBGCompany = Match.Type("123"),
+            //        GainID = Match.Type("GP_5")
+            //    }),
+            References = Match.Type(new[]
             {
-                GainPartyId = Match.Type("123"),
-                Issuer = Match.Type(true),
-                PartyFreeCode20 = Match.Type("abc"),
-                Party = Match.Type("GP_5"),
-                PartyName = Match.Type("GP_5"),
-                ReviewDate = Match.Type("2024-01-01T00:00:00Z"),
-                BBGCompany = Match.Type("123"),
-                GainID = Match.Type("GP_5")
-            }),
-            References = Match.Type(new
-            {
-                Ref = new
+                new
                 {
-                    Model = "SimCorpDimension",
-                    DataType = "Party",
-                    Domain = "Silver",
-                    Id = 12,
-                    Version = 1
+                    Ref = Match.Type(new
+                    {
+                        Model = "SimCorpDimension",
+                        DataType = "Party",
+                        Domain = "Silver",
+                        Id = 12,
+                        Version = 1
+                    }),
+                    Type = Match.Type(DataReferenceType.Link)
                 }
-                //Type = new DataReferenceType(),
             }),
-            Fingerprint = Match.Type("123"),
+            Fingerprint = Match.Type("12"),
             Model = Match.Type("SimCorpDimension"),
             DataType = Match.Type("Party"),
             Domain = Match.Type("Golden"),
-            Id = Match.Number(123)
+            Id = Match.Number(12)
         };
 
         private readonly static Dictionary<Type, object> expectedEventDict = new Dictionary<Type, object>
@@ -126,7 +132,7 @@ namespace MessageContract.Tests
 
         };
 
-        public static object GetContent(Type eventType)
+        public static object GetExpectations(Type eventType)
         {
             if (expectedEventDict.TryGetValue(eventType, out object content))
             {

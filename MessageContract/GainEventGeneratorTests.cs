@@ -37,7 +37,6 @@ public class GainEventGeneratorTests : IDisposable
         Dictionary<string, List<object>> actualGroupByMessagesWithType = Steps.PrepareData("ActualMessagesForTesting.json");
         ICollection<string> messageTypes = actualGroupByMessagesWithType.Keys;
 
-
         _verifier
         .WithMessages(scenarios =>
         {
@@ -50,17 +49,16 @@ public class GainEventGeneratorTests : IDisposable
                     throw new Exception($"No matching expected message group found");
                 }
                 scenarios
-                    .Add($"{eventType.Name} Message from Gain for the feed upload request", builder =>
+                .Add($"{eventType.Name} Message from Gain for the feed upload request", builder =>
+                {
+                    builder
+                    .WithMetadata(new
                     {
-                        builder
-                        .WithMetadata(new
-                        {
-                            ContentType = "application/json",
-                            Key = "valueKey"
-                        })
-                    .WithContent(() => actualGroupedMsgs);
-
-                    });
+                        ContentType = "application/json",
+                        Key = "valueKey"
+                    })
+                .WithContent(() => actualGroupedMsgs);
+                });
             }
 
         }, defaultSettings)

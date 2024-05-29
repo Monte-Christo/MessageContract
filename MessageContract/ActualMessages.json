@@ -381,14 +381,7 @@
       "Discriminator": "Master",
       "Version": 1,
       "Data": {
-        "GainPartyId": "{gainPartyId}",
-        "Issuer": true,
-        "PartyFreeCode20": "abc",
-        "Party": "GP_5{goldenCopyIdentityId}",
-        "PartyName": "GP_5{goldenCopyIdentityId}",
-        "ReviewDate": "2024-01-01T00:00:00Z",
-        "BBGCompany": "{idBBCompany}",
-        "GainID": "GP_5{goldenCopyIdentityId}"
+        "abc": 123,
       },
       "References": [
         {

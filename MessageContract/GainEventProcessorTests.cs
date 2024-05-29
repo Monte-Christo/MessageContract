@@ -2,6 +2,7 @@ using FluentAssertions;
 using PactNet;
 using PactNet.Matchers;
 using PactNet.Output.Xunit;
+using SimCorp.Gain.Messages.Data;
 using SimCorp.Gain.Messages.System.Workflow;
 using System.Text.Json;
 using Xunit.Abstractions;
@@ -54,7 +55,7 @@ public class GainEventProcessorTests
                  .ExpectsToReceive($"{eventType.Name} Message from Gain for the feed upload request")
                  .Given($"{eventType.Name} events are pushed to the queue")
                  .WithMetadata("key", "valueKey")
-                 .WithJsonContent(Match.MinType(MessageExpectationProvider.GetContent(eventType), actualMessageCount))
+                 .WithJsonContent(Match.MinType(MessageExpectationProvider.GetExpectations(eventType), actualMessageCount))
                  .Verify<ICollection<WorkflowCreated>>(events =>
                  {
                      events.Should().BeEquivalentTo(new[] { expectedGroupedMsgs[0] });
@@ -67,7 +68,7 @@ public class GainEventProcessorTests
                  .ExpectsToReceive($"{eventType.Name} Message from Gain for the feed upload request")
                  .Given($"{eventType.Name} events are pushed to the queue")
                  .WithMetadata("key", "valueKey")
-                 .WithJsonContent(Match.MinType(MessageExpectationProvider.GetContent(eventType), actualMessageCount))
+                 .WithJsonContent(Match.MinType(MessageExpectationProvider.GetExpectations(eventType), actualMessageCount))
                  .Verify<ICollection<WorkflowFinished>>(events =>
                  {
                      events.Should().BeEquivalentTo(new[] { expectedGroupedMsgs[0] });
@@ -80,7 +81,7 @@ public class GainEventProcessorTests
                  .ExpectsToReceive($"{eventType.Name} Message from Gain for the feed upload request")
                  .Given($"{eventType.Name} events are pushed to the queue")
                  .WithMetadata("key", "valueKey")
-                 .WithJsonContent(Match.MinType(MessageExpectationProvider.GetContent(eventType), actualMessageCount))
+                 .WithJsonContent(Match.MinType(MessageExpectationProvider.GetExpectations(eventType), actualMessageCount))
                  .Verify<ICollection<WorkflowReady>>(events =>
                  {
                      events.Should().BeEquivalentTo(new[] { expectedGroupedMsgs[0] });
@@ -94,7 +95,7 @@ public class GainEventProcessorTests
                  .ExpectsToReceive($"{eventType.Name} Message from Gain for the feed upload request")
                  .Given($"{eventType.Name} events are pushed to the queue")
                  .WithMetadata("key", "valueKey")
-                 .WithJsonContent(Match.MinType(MessageExpectationProvider.GetContent(eventType), actualMessageCount))
+                 .WithJsonContent(Match.MinType(MessageExpectationProvider.GetExpectations(eventType), actualMessageCount))
                  .Verify<ICollection<WorkflowWaiting>>(events =>
                  {
                      events.Should().BeEquivalentTo(new[] { expectedGroupedMsgs[0] });
@@ -107,25 +108,25 @@ public class GainEventProcessorTests
                  .ExpectsToReceive($"{eventType.Name} Message from Gain for the feed upload request")
                  .Given($"{eventType.Name} events are pushed to the queue")
                  .WithMetadata("key", "valueKey")
-                 .WithJsonContent(Match.MinType(MessageExpectationProvider.GetContent(eventType), actualMessageCount))
+                 .WithJsonContent(Match.MinType(MessageExpectationProvider.GetExpectations(eventType), actualMessageCount))
                  .Verify<ICollection<WorkflowChangedBusinessObject>>(events =>
                  {
                      events.Should().BeEquivalentTo(new[] { expectedGroupedMsgs[0] });
                  });
             }
 
-            //else if (eventType.Name == "BusinessObjectChanged")
-            //{
-            //    this._messagePact
-            //     .ExpectsToReceive($"{eventType.Name} Message from Gain for the feed upload request")
-            //     .Given($"{eventType.Name} events are pushed to the queue")
-            //     .WithMetadata("key", "valueKey")
-            //     .WithJsonContent(Match.MinType(MessageExpectationProvider.GetContent(eventType), actualMessageCount))
-            //     .Verify<ICollection<BusinessObjectChanged>>(events =>
-            //     {
-            //         events.Should().BeEquivalentTo(new[] { expectedGroupedMsgs[0] });
-            //     });
-            //}
+            else if (eventType.Name == "BusinessObjectChanged")
+            {
+                this._messagePact
+                 .ExpectsToReceive($"{eventType.Name} Message from Gain for the feed upload request")
+                 .Given($"{eventType.Name} events are pushed to the queue")
+                 .WithMetadata("key", "valueKey")
+                 .WithJsonContent(Match.MinType(MessageExpectationProvider.GetExpectations(eventType), actualMessageCount))
+                 .Verify<ICollection<BusinessObjectChanged>>(events =>
+                 {
+                     events.Should().BeEquivalentTo(new[] { expectedGroupedMsgs[0] });
+                 });
+            }
         }
     }
 }
