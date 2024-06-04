@@ -81,20 +81,6 @@ namespace MessageContract.Tests
                     Type = Match.Type(WorkflowType.Scrubbing),
                 }),
             Discriminator = Match.Type("Master"),
-            // To Do: Check how to set up Match rule for object type.
-            // The error: Expected property events[0].Data to be a dictionary or collection of key-value pairs that is keyed to type System.String
-            //Data = Match.Type(
-            //    new
-            //    {
-            //        GainPartyId = Match.Type("123"),
-            //        Issuer = Match.Type(true),
-            //        PartyFreeCode20 = Match.Type("abc"),
-            //        Party = Match.Type("GP_5"),
-            //        PartyName = Match.Type("GP_5"),
-            //        ReviewDate = Match.Type("2024-01-01T00:00:00Z"),
-            //        BBGCompany = Match.Type("123"),
-            //        GainID = Match.Type("GP_5")
-            //    }),
             References = Match.Type(new[]
             {
                 new

@@ -8,7 +8,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pacts", "Pacts", "{4AAB880C-9864-40B6-A0DB-64D23B9AA204}"
 	ProjectSection(SolutionItems) = preProject
 		pacts\OperationTracking-Gain.json = pacts\OperationTracking-Gain.json
-		pacts\Stock Event Consumer-Stock Event Producer.json = pacts\Stock Event Consumer-Stock Event Producer.json
 	EndProjectSection
 EndProject
 Global
