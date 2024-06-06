@@ -22,9 +22,7 @@ public class GainEventGeneratorTests : IDisposable
     [Fact]
     public void EnsureEventApiHonorsPactWithConsumer()
     {
-        string pactPath = Path.Combine("..", "..", "..", "..",
-          "pacts",
-          "OperationTracking-Gain.json");
+        string pactPath = Path.Combine("..", "..", "..", "..", "pacts", "OperationTracking-Gain.json");
         if (!File.Exists(pactPath))
         {
             throw new ArgumentException(pactPath);

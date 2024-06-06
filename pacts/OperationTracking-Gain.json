@@ -329,6 +329,1545 @@
       "contents": {
         "content": [
           {
+            "dataType": "Party",
+            "discriminator": "Master",
+            "domain": "Golden",
+            "fingerprint": "12",
+            "id": 12,
+            "model": "SimCorpDimension",
+            "references": [
+              {
+                "ref": {
+                  "dataType": "Party",
+                  "domain": "Silver",
+                  "id": 12,
+                  "model": "SimCorpDimension",
+                  "version": 1
+                },
+                "type": 0
+              }
+            ],
+            "workflowReference": {
+              "correlationId": "ab",
+              "id": 12,
+              "type": 1
+            }
+          }
+        ],
+        "contentType": "application/json",
+        "encoded": false
+      },
+      "description": "BusinessObjectChanged Message from Gain for the feed upload request",
+      "matchingRules": {
+        "body": {
+          "$": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type",
+                "min": 1
+              }
+            ]
+          },
+          "$[*].dataType": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          },
+          "$[*].discriminator": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          },
+          "$[*].domain": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          },
+          "$[*].fingerprint": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          },
+          "$[*].id": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "number"
+              }
+            ]
+          },
+          "$[*].model": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          },
+          "$[*].references": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          },
+          "$[*].references[*].ref": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          },
+          "$[*].references[*].type": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          },
+          "$[*].workflowReference": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          },
+          "$[*].workflowReference.correlationId": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          },
+          "$[*].workflowReference.id": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "number"
+              }
+            ]
+          },
+          "$[*].workflowReference.type": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          }
+        }
+      },
+      "metadata": {
+        "key": "valueKey"
+      },
+      "pending": false,
+      "providerStates": [
+        {
+          "name": "BusinessObjectChanged events are pushed to the queue"
+        }
+      ],
+      "type": "Asynchronous/Messages"
+    },
+    {
+      "contents": {
+        "content": [
+          {
+            "dataType": "Party",
+            "discriminator": "Master",
+            "domain": "Golden",
+            "fingerprint": "12",
+            "id": 12,
+            "model": "SimCorpDimension",
+            "references": [
+              {
+                "ref": {
+                  "dataType": "Party",
+                  "domain": "Silver",
+                  "id": 12,
+                  "model": "SimCorpDimension",
+                  "version": 1
+                },
+                "type": 0
+              }
+            ],
+            "workflowReference": {
+              "correlationId": "ab",
+              "id": 12,
+              "type": 1
+            }
+          }
+        ],
+        "contentType": "application/json",
+        "encoded": false
+      },
+      "description": "BusinessObjectChanged Message from Gain for the feed upload request",
+      "matchingRules": {
+        "body": {
+          "$": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type",
+                "min": 1
+              }
+            ]
+          },
+          "$[*].dataType": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          },
+          "$[*].discriminator": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          },
+          "$[*].domain": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          },
+          "$[*].fingerprint": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          },
+          "$[*].id": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "number"
+              }
+            ]
+          },
+          "$[*].model": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          },
+          "$[*].references": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          },
+          "$[*].references[*].ref": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          },
+          "$[*].references[*].type": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          },
+          "$[*].workflowReference": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          },
+          "$[*].workflowReference.correlationId": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          },
+          "$[*].workflowReference.id": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "number"
+              }
+            ]
+          },
+          "$[*].workflowReference.type": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          }
+        }
+      },
+      "metadata": {
+        "key": "valueKey"
+      },
+      "pending": false,
+      "providerStates": [
+        {
+          "name": "BusinessObjectChanged events are pushed to the queue"
+        }
+      ],
+      "type": "Asynchronous/Messages"
+    },
+    {
+      "contents": {
+        "content": [
+          {
+            "dataType": "Party",
+            "discriminator": "Master",
+            "domain": "Golden",
+            "fingerprint": "12",
+            "id": 12,
+            "model": "SimCorpDimension",
+            "references": [
+              {
+                "ref": {
+                  "dataType": "Party",
+                  "domain": "Silver",
+                  "id": 12,
+                  "model": "SimCorpDimension",
+                  "version": 1
+                },
+                "type": 0
+              }
+            ],
+            "workflowReference": {
+              "correlationId": "ab",
+              "id": 12,
+              "type": 1
+            }
+          }
+        ],
+        "contentType": "application/json",
+        "encoded": false
+      },
+      "description": "BusinessObjectChanged Message from Gain for the feed upload request",
+      "matchingRules": {
+        "body": {
+          "$": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type",
+                "min": 1
+              }
+            ]
+          },
+          "$[*].dataType": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          },
+          "$[*].discriminator": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          },
+          "$[*].domain": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          },
+          "$[*].fingerprint": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          },
+          "$[*].id": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "number"
+              }
+            ]
+          },
+          "$[*].model": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          },
+          "$[*].references": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          },
+          "$[*].references[*].ref": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          },
+          "$[*].references[*].type": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          },
+          "$[*].workflowReference": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          },
+          "$[*].workflowReference.correlationId": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          },
+          "$[*].workflowReference.id": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "number"
+              }
+            ]
+          },
+          "$[*].workflowReference.type": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          }
+        }
+      },
+      "metadata": {
+        "key": "valueKey"
+      },
+      "pending": false,
+      "providerStates": [
+        {
+          "name": "BusinessObjectChanged events are pushed to the queue"
+        }
+      ],
+      "type": "Asynchronous/Messages"
+    },
+    {
+      "contents": {
+        "content": [
+          {
+            "businessObjectReference": {
+              "dataType": "Party",
+              "discriminator": null,
+              "domain": "Golden",
+              "id": 123,
+              "model": "SimCorpDimension",
+              "version": 1
+            },
+            "correlationId": "aa",
+            "discriminator": "Master",
+            "title": "GP_5232",
+            "workflowId": 123,
+            "workflowType": 0
+          }
+        ],
+        "contentType": "application/json",
+        "encoded": false
+      },
+      "description": "WorkflowChangedBusinessObject Message from Gain for the feed upload request",
+      "matchingRules": {
+        "body": {
+          "$": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type",
+                "min": 1
+              }
+            ]
+          },
+          "$[*].businessObjectReference": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          },
+          "$[*].correlationId": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          },
+          "$[*].title": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "include",
+                "value": "GP_5232"
+              }
+            ]
+          },
+          "$[*].workflowId": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "number"
+              }
+            ]
+          },
+          "$[*].workflowType": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          }
+        }
+      },
+      "metadata": {
+        "key": "valueKey"
+      },
+      "pending": false,
+      "providerStates": [
+        {
+          "name": "WorkflowChangedBusinessObject events are pushed to the queue"
+        }
+      ],
+      "type": "Asynchronous/Messages"
+    },
+    {
+      "contents": {
+        "content": [
+          {
+            "businessObjectReference": {
+              "dataType": "Party",
+              "discriminator": null,
+              "domain": "Golden",
+              "id": 123,
+              "model": "SimCorpDimension",
+              "version": 1
+            },
+            "correlationId": "aa",
+            "discriminator": "Master",
+            "title": "GP_5232",
+            "workflowId": 123,
+            "workflowType": 0
+          }
+        ],
+        "contentType": "application/json",
+        "encoded": false
+      },
+      "description": "WorkflowChangedBusinessObject Message from Gain for the feed upload request",
+      "matchingRules": {
+        "body": {
+          "$": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type",
+                "min": 1
+              }
+            ]
+          },
+          "$[*].businessObjectReference": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          },
+          "$[*].correlationId": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          },
+          "$[*].title": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "include",
+                "value": "GP_5232"
+              }
+            ]
+          },
+          "$[*].workflowId": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "number"
+              }
+            ]
+          },
+          "$[*].workflowType": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          }
+        }
+      },
+      "metadata": {
+        "key": "valueKey"
+      },
+      "pending": false,
+      "providerStates": [
+        {
+          "name": "WorkflowChangedBusinessObject events are pushed to the queue"
+        }
+      ],
+      "type": "Asynchronous/Messages"
+    },
+    {
+      "contents": {
+        "content": [
+          {
+            "businessObjectReference": {
+              "dataType": "Party",
+              "discriminator": null,
+              "domain": "Golden",
+              "id": 123,
+              "model": "SimCorpDimension",
+              "version": 1
+            },
+            "correlationId": "aa",
+            "discriminator": "Master",
+            "title": "GP_5232",
+            "workflowId": 123,
+            "workflowType": 0
+          }
+        ],
+        "contentType": "application/json",
+        "encoded": false
+      },
+      "description": "WorkflowChangedBusinessObject Message from Gain for the feed upload request",
+      "matchingRules": {
+        "body": {
+          "$": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type",
+                "min": 1
+              }
+            ]
+          },
+          "$[*].businessObjectReference": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          },
+          "$[*].correlationId": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          },
+          "$[*].title": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "include",
+                "value": "GP_5232"
+              }
+            ]
+          },
+          "$[*].workflowId": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "number"
+              }
+            ]
+          },
+          "$[*].workflowType": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          }
+        }
+      },
+      "metadata": {
+        "key": "valueKey"
+      },
+      "pending": false,
+      "providerStates": [
+        {
+          "name": "WorkflowChangedBusinessObject events are pushed to the queue"
+        }
+      ],
+      "type": "Asynchronous/Messages"
+    },
+    {
+      "contents": {
+        "content": [
+          {
+            "businessObjectReference": {
+              "dataType": "Party",
+              "discriminator": null,
+              "domain": "Golden",
+              "id": 123,
+              "model": "SimCorpDimension",
+              "version": 1
+            },
+            "correlationId": "aa",
+            "discriminator": "Master",
+            "title": "GP_5232",
+            "workflowId": 123,
+            "workflowType": 0
+          }
+        ],
+        "contentType": "application/json",
+        "encoded": false
+      },
+      "description": "WorkflowChangedBusinessObject Message from Gain for the feed upload request",
+      "matchingRules": {
+        "body": {
+          "$": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type",
+                "min": 1
+              }
+            ]
+          },
+          "$[*].businessObjectReference": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          },
+          "$[*].correlationId": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          },
+          "$[*].title": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "include",
+                "value": "GP_5232"
+              }
+            ]
+          },
+          "$[*].workflowId": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "number"
+              }
+            ]
+          },
+          "$[*].workflowType": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          }
+        }
+      },
+      "metadata": {
+        "key": "valueKey"
+      },
+      "pending": false,
+      "providerStates": [
+        {
+          "name": "WorkflowChangedBusinessObject events are pushed to the queue"
+        }
+      ],
+      "type": "Asynchronous/Messages"
+    },
+    {
+      "contents": {
+        "content": [
+          {
+            "businessObjectReference": {
+              "dataType": "Party",
+              "discriminator": null,
+              "domain": "Golden",
+              "id": 123,
+              "model": "SimCorpDimension",
+              "version": 1
+            },
+            "correlationId": "aa",
+            "discriminator": "Master",
+            "title": "GP_5232",
+            "workflowId": 123,
+            "workflowType": 0
+          }
+        ],
+        "contentType": "application/json",
+        "encoded": false
+      },
+      "description": "WorkflowChangedBusinessObject Message from Gain for the feed upload request",
+      "matchingRules": {
+        "body": {
+          "$": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type",
+                "min": 1
+              }
+            ]
+          },
+          "$[*].businessObjectReference": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          },
+          "$[*].correlationId": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          },
+          "$[*].title": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "include",
+                "value": "GP_5232"
+              }
+            ]
+          },
+          "$[*].workflowId": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "number"
+              }
+            ]
+          },
+          "$[*].workflowType": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          }
+        }
+      },
+      "metadata": {
+        "key": "valueKey"
+      },
+      "pending": false,
+      "providerStates": [
+        {
+          "name": "WorkflowChangedBusinessObject events are pushed to the queue"
+        }
+      ],
+      "type": "Asynchronous/Messages"
+    },
+    {
+      "contents": {
+        "content": [
+          {
+            "businessObjectReference": {
+              "dataType": "Party",
+              "discriminator": null,
+              "domain": "Golden",
+              "id": 123,
+              "model": "SimCorpDimension",
+              "version": 1
+            },
+            "correlationId": "aa",
+            "discriminator": "Master",
+            "title": "GP_5232",
+            "workflowId": 123,
+            "workflowType": 0
+          }
+        ],
+        "contentType": "application/json",
+        "encoded": false
+      },
+      "description": "WorkflowChangedBusinessObject Message from Gain for the feed upload request",
+      "matchingRules": {
+        "body": {
+          "$": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type",
+                "min": 1
+              }
+            ]
+          },
+          "$[*].businessObjectReference": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          },
+          "$[*].correlationId": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          },
+          "$[*].title": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "include",
+                "value": "GP_5232"
+              }
+            ]
+          },
+          "$[*].workflowId": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "number"
+              }
+            ]
+          },
+          "$[*].workflowType": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          }
+        }
+      },
+      "metadata": {
+        "key": "valueKey"
+      },
+      "pending": false,
+      "providerStates": [
+        {
+          "name": "WorkflowChangedBusinessObject events are pushed to the queue"
+        }
+      ],
+      "type": "Asynchronous/Messages"
+    },
+    {
+      "contents": {
+        "content": [
+          {
+            "businessObjectReference": {
+              "dataType": "Party",
+              "discriminator": null,
+              "domain": "Golden",
+              "id": 123,
+              "model": "SimCorpDimension",
+              "version": 1
+            },
+            "correlationId": "aa",
+            "discriminator": "Master",
+            "title": "GP_5232",
+            "workflowId": 123,
+            "workflowType": 0
+          }
+        ],
+        "contentType": "application/json",
+        "encoded": false
+      },
+      "description": "WorkflowChangedBusinessObject Message from Gain for the feed upload request",
+      "matchingRules": {
+        "body": {
+          "$": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type",
+                "min": 1
+              }
+            ]
+          },
+          "$[*].businessObjectReference": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          },
+          "$[*].correlationId": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          },
+          "$[*].title": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "include",
+                "value": "GP_5232"
+              }
+            ]
+          },
+          "$[*].workflowId": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "number"
+              }
+            ]
+          },
+          "$[*].workflowType": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          }
+        }
+      },
+      "metadata": {
+        "key": "valueKey"
+      },
+      "pending": false,
+      "providerStates": [
+        {
+          "name": "WorkflowChangedBusinessObject events are pushed to the queue"
+        }
+      ],
+      "type": "Asynchronous/Messages"
+    },
+    {
+      "contents": {
+        "content": [
+          {
+            "businessObjectReference": {
+              "dataType": "Party",
+              "discriminator": null,
+              "domain": "Golden",
+              "id": 123,
+              "model": "SimCorpDimension",
+              "version": 1
+            },
+            "correlationId": "aa",
+            "discriminator": "Master",
+            "title": "GP_5232",
+            "workflowId": 123,
+            "workflowType": 0
+          }
+        ],
+        "contentType": "application/json",
+        "encoded": false
+      },
+      "description": "WorkflowChangedBusinessObject Message from Gain for the feed upload request",
+      "matchingRules": {
+        "body": {
+          "$": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type",
+                "min": 1
+              }
+            ]
+          },
+          "$[*].businessObjectReference": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          },
+          "$[*].correlationId": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          },
+          "$[*].title": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "include",
+                "value": "GP_5232"
+              }
+            ]
+          },
+          "$[*].workflowId": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "number"
+              }
+            ]
+          },
+          "$[*].workflowType": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          }
+        }
+      },
+      "metadata": {
+        "key": "valueKey"
+      },
+      "pending": false,
+      "providerStates": [
+        {
+          "name": "WorkflowChangedBusinessObject events are pushed to the queue"
+        }
+      ],
+      "type": "Asynchronous/Messages"
+    },
+    {
+      "contents": {
+        "content": [
+          {
+            "businessObjectReference": {
+              "dataType": "Party",
+              "discriminator": null,
+              "domain": "Golden",
+              "id": 123,
+              "model": "SimCorpDimension",
+              "version": 1
+            },
+            "correlationId": "aa",
+            "discriminator": "Master",
+            "title": "GP_5232",
+            "workflowId": 123,
+            "workflowType": 0
+          }
+        ],
+        "contentType": "application/json",
+        "encoded": false
+      },
+      "description": "WorkflowChangedBusinessObject Message from Gain for the feed upload request",
+      "matchingRules": {
+        "body": {
+          "$": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type",
+                "min": 1
+              }
+            ]
+          },
+          "$[*].businessObjectReference": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          },
+          "$[*].correlationId": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          },
+          "$[*].title": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "include",
+                "value": "GP_5232"
+              }
+            ]
+          },
+          "$[*].workflowId": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "number"
+              }
+            ]
+          },
+          "$[*].workflowType": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          }
+        }
+      },
+      "metadata": {
+        "key": "valueKey"
+      },
+      "pending": false,
+      "providerStates": [
+        {
+          "name": "WorkflowChangedBusinessObject events are pushed to the queue"
+        }
+      ],
+      "type": "Asynchronous/Messages"
+    },
+    {
+      "contents": {
+        "content": [
+          {
+            "businessObjectReference": {
+              "dataType": "Party",
+              "discriminator": null,
+              "domain": "Golden",
+              "id": 123,
+              "model": "SimCorpDimension",
+              "version": 1
+            },
+            "correlationId": "aa",
+            "discriminator": "Master",
+            "title": "GP_5232",
+            "workflowId": 123,
+            "workflowType": 0
+          }
+        ],
+        "contentType": "application/json",
+        "encoded": false
+      },
+      "description": "WorkflowChangedBusinessObject Message from Gain for the feed upload request",
+      "matchingRules": {
+        "body": {
+          "$": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type",
+                "min": 1
+              }
+            ]
+          },
+          "$[*].businessObjectReference": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          },
+          "$[*].correlationId": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          },
+          "$[*].title": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "include",
+                "value": "GP_5232"
+              }
+            ]
+          },
+          "$[*].workflowId": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "number"
+              }
+            ]
+          },
+          "$[*].workflowType": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          }
+        }
+      },
+      "metadata": {
+        "key": "valueKey"
+      },
+      "pending": false,
+      "providerStates": [
+        {
+          "name": "WorkflowChangedBusinessObject events are pushed to the queue"
+        }
+      ],
+      "type": "Asynchronous/Messages"
+    },
+    {
+      "contents": {
+        "content": [
+          {
+            "businessObjectReference": {
+              "dataType": "Party",
+              "discriminator": null,
+              "domain": "Golden",
+              "id": 123,
+              "model": "SimCorpDimension",
+              "version": 1
+            },
+            "correlationId": "aa",
+            "discriminator": "Master",
+            "title": "GP_5232",
+            "workflowId": 123,
+            "workflowType": 0
+          }
+        ],
+        "contentType": "application/json",
+        "encoded": false
+      },
+      "description": "WorkflowChangedBusinessObject Message from Gain for the feed upload request",
+      "matchingRules": {
+        "body": {
+          "$": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type",
+                "min": 1
+              }
+            ]
+          },
+          "$[*].businessObjectReference": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          },
+          "$[*].correlationId": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          },
+          "$[*].title": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "include",
+                "value": "GP_5232"
+              }
+            ]
+          },
+          "$[*].workflowId": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "number"
+              }
+            ]
+          },
+          "$[*].workflowType": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          }
+        }
+      },
+      "metadata": {
+        "key": "valueKey"
+      },
+      "pending": false,
+      "providerStates": [
+        {
+          "name": "WorkflowChangedBusinessObject events are pushed to the queue"
+        }
+      ],
+      "type": "Asynchronous/Messages"
+    },
+    {
+      "contents": {
+        "content": [
+          {
+            "businessObjectReference": {
+              "dataType": "Party",
+              "discriminator": null,
+              "domain": "Golden",
+              "id": 123,
+              "model": "SimCorpDimension",
+              "version": 1
+            },
+            "correlationId": "aa",
+            "discriminator": "Master",
+            "title": "GP_5232",
+            "workflowId": 123,
+            "workflowType": 0
+          }
+        ],
+        "contentType": "application/json",
+        "encoded": false
+      },
+      "description": "WorkflowChangedBusinessObject Message from Gain for the feed upload request",
+      "matchingRules": {
+        "body": {
+          "$": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type",
+                "min": 1
+              }
+            ]
+          },
+          "$[*].businessObjectReference": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          },
+          "$[*].correlationId": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          },
+          "$[*].title": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "include",
+                "value": "GP_5232"
+              }
+            ]
+          },
+          "$[*].workflowId": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "number"
+              }
+            ]
+          },
+          "$[*].workflowType": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          }
+        }
+      },
+      "metadata": {
+        "key": "valueKey"
+      },
+      "pending": false,
+      "providerStates": [
+        {
+          "name": "WorkflowChangedBusinessObject events are pushed to the queue"
+        }
+      ],
+      "type": "Asynchronous/Messages"
+    },
+    {
+      "contents": {
+        "content": [
+          {
             "businessObjectReference": {
               "dataType": "Party",
               "discriminator": null,
@@ -5698,6 +7237,372 @@
       "providerStates": [
         {
           "name": "WorkflowFinished events are pushed to the queue"
+        }
+      ],
+      "type": "Asynchronous/Messages"
+    },
+    {
+      "contents": {
+        "content": [
+          {
+            "correlationId": "aa",
+            "workflowId": 123,
+            "workflowType": 0
+          }
+        ],
+        "contentType": "application/json",
+        "encoded": false
+      },
+      "description": "WorkflowReady Message from Gain for the feed upload request",
+      "matchingRules": {
+        "body": {
+          "$": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type",
+                "min": 1
+              }
+            ]
+          },
+          "$[*].correlationId": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          },
+          "$[*].workflowId": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "number"
+              }
+            ]
+          },
+          "$[*].workflowType": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          }
+        }
+      },
+      "metadata": {
+        "key": "valueKey"
+      },
+      "pending": false,
+      "providerStates": [
+        {
+          "name": "WorkflowReady events are pushed to the queue"
+        }
+      ],
+      "type": "Asynchronous/Messages"
+    },
+    {
+      "contents": {
+        "content": [
+          {
+            "correlationId": "aa",
+            "workflowId": 123,
+            "workflowType": 0
+          }
+        ],
+        "contentType": "application/json",
+        "encoded": false
+      },
+      "description": "WorkflowReady Message from Gain for the feed upload request",
+      "matchingRules": {
+        "body": {
+          "$": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type",
+                "min": 1
+              }
+            ]
+          },
+          "$[*].correlationId": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          },
+          "$[*].workflowId": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "number"
+              }
+            ]
+          },
+          "$[*].workflowType": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          }
+        }
+      },
+      "metadata": {
+        "key": "valueKey"
+      },
+      "pending": false,
+      "providerStates": [
+        {
+          "name": "WorkflowReady events are pushed to the queue"
+        }
+      ],
+      "type": "Asynchronous/Messages"
+    },
+    {
+      "contents": {
+        "content": [
+          {
+            "correlationId": "aa",
+            "workflowId": 123,
+            "workflowType": 0
+          }
+        ],
+        "contentType": "application/json",
+        "encoded": false
+      },
+      "description": "WorkflowReady Message from Gain for the feed upload request",
+      "matchingRules": {
+        "body": {
+          "$": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type",
+                "min": 1
+              }
+            ]
+          },
+          "$[*].correlationId": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          },
+          "$[*].workflowId": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "number"
+              }
+            ]
+          },
+          "$[*].workflowType": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          }
+        }
+      },
+      "metadata": {
+        "key": "valueKey"
+      },
+      "pending": false,
+      "providerStates": [
+        {
+          "name": "WorkflowReady events are pushed to the queue"
+        }
+      ],
+      "type": "Asynchronous/Messages"
+    },
+    {
+      "contents": {
+        "content": [
+          {
+            "correlationId": "aa",
+            "workflowId": 123,
+            "workflowType": 0
+          }
+        ],
+        "contentType": "application/json",
+        "encoded": false
+      },
+      "description": "WorkflowReady Message from Gain for the feed upload request",
+      "matchingRules": {
+        "body": {
+          "$": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type",
+                "min": 1
+              }
+            ]
+          },
+          "$[*].correlationId": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          },
+          "$[*].workflowId": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "number"
+              }
+            ]
+          },
+          "$[*].workflowType": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          }
+        }
+      },
+      "metadata": {
+        "key": "valueKey"
+      },
+      "pending": false,
+      "providerStates": [
+        {
+          "name": "WorkflowReady events are pushed to the queue"
+        }
+      ],
+      "type": "Asynchronous/Messages"
+    },
+    {
+      "contents": {
+        "content": [
+          {
+            "correlationId": "aa",
+            "workflowId": 123,
+            "workflowType": 0
+          }
+        ],
+        "contentType": "application/json",
+        "encoded": false
+      },
+      "description": "WorkflowReady Message from Gain for the feed upload request",
+      "matchingRules": {
+        "body": {
+          "$": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type",
+                "min": 1
+              }
+            ]
+          },
+          "$[*].correlationId": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          },
+          "$[*].workflowId": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "number"
+              }
+            ]
+          },
+          "$[*].workflowType": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          }
+        }
+      },
+      "metadata": {
+        "key": "valueKey"
+      },
+      "pending": false,
+      "providerStates": [
+        {
+          "name": "WorkflowReady events are pushed to the queue"
+        }
+      ],
+      "type": "Asynchronous/Messages"
+    },
+    {
+      "contents": {
+        "content": [
+          {
+            "correlationId": "aa",
+            "workflowId": 123,
+            "workflowType": 0
+          }
+        ],
+        "contentType": "application/json",
+        "encoded": false
+      },
+      "description": "WorkflowReady Message from Gain for the feed upload request",
+      "matchingRules": {
+        "body": {
+          "$": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type",
+                "min": 1
+              }
+            ]
+          },
+          "$[*].correlationId": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          },
+          "$[*].workflowId": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "number"
+              }
+            ]
+          },
+          "$[*].workflowType": {
+            "combine": "AND",
+            "matchers": [
+              {
+                "match": "type"
+              }
+            ]
+          }
+        }
+      },
+      "metadata": {
+        "key": "valueKey"
+      },
+      "pending": false,
+      "providerStates": [
+        {
+          "name": "WorkflowReady events are pushed to the queue"
         }
       ],
       "type": "Asynchronous/Messages"
