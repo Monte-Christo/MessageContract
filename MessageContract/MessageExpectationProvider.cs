@@ -10,7 +10,7 @@ namespace MessageContract.Tests
     internal static class MessageExpectationProvider
     {
         //Expectations on each property of each message type
-        private readonly static object workflowCreatedContent = new
+        private static readonly object WorkflowCreatedContent = new
         {
             StartArg = Match.Type("Aim.Gain.StaticData.DataManagement.BusinessProcess.FreshAggregateRequestBusinessProcessStartArgument"),
             Description = Match.Type("Party from feed Excel-Party [IdBBCompany:abc]"),
@@ -23,7 +23,7 @@ namespace MessageContract.Tests
             CorrelationId = Match.Type("sba"),
         };
 
-        private readonly static object workflowFinishedContent = new
+        private static readonly object WorkflowFinishedContent = new
         {
             State = Match.Type(WorkflowFinishedState.Finished),
             WorkflowId = Match.Number(123),
@@ -31,7 +31,7 @@ namespace MessageContract.Tests
             CorrelationId = Match.Type("abc")
         };
 
-        private readonly static object workflowChangedBusinessObjectContent = new
+        private static readonly object WorkflowChangedBusinessObjectContent = new
         {
             BusinessObjectReference = Match.Type(
                 new BusinessObjectReference()
@@ -49,29 +49,29 @@ namespace MessageContract.Tests
             CorrelationId = Match.Type("aa")
         };
 
-        private readonly static object startOperationFailedContent = new
+        private static readonly object StartOperationFailedContent = new
         {
         };
 
-        private readonly static object startOperationSucceededContent = new
+        private static readonly object StartOperationSucceededContent = new
         {
         };
 
-        private readonly static object workflowReadyContent = new
+        private static readonly object WorkflowReadyContent = new
         {
             WorkflowId = Match.Number(123),
             WorkflowType = Match.Type(WorkflowType.Business),
             CorrelationId = Match.Type("aa")
         };
 
-        private readonly static object workflowWaitingContent = new
+        private static readonly object WorkflowWaitingContent = new
         {
             WaitingFor = Match.Type(WorkflowWaitingFor.Workflow),
             WorkflowId = Match.Number(123),
             CorrelationId = Match.Type("aa")
         };
 
-        private readonly static object businessObjectChangedContent = new
+        private static readonly object BusinessObjectChangedContent = new
         {
             WorkflowReference = Match.Type(
                 new
@@ -81,20 +81,6 @@ namespace MessageContract.Tests
                     Type = Match.Type(WorkflowType.Scrubbing),
                 }),
             Discriminator = Match.Type("Master"),
-            // To Do: Check how to set up Match rule for object type.
-            // The error: Expected property events[0].Data to be a dictionary or collection of key-value pairs that is keyed to type System.String
-            //Data = Match.Type(
-            //    new
-            //    {
-            //        GainPartyId = Match.Type("123"),
-            //        Issuer = Match.Type(true),
-            //        PartyFreeCode20 = Match.Type("abc"),
-            //        Party = Match.Type("GP_5"),
-            //        PartyName = Match.Type("GP_5"),
-            //        ReviewDate = Match.Type("2024-01-01T00:00:00Z"),
-            //        BBGCompany = Match.Type("123"),
-            //        GainID = Match.Type("GP_5")
-            //    }),
             References = Match.Type(new[]
             {
                 new
@@ -117,24 +103,24 @@ namespace MessageContract.Tests
             Id = Match.Number(12)
         };
 
-        private readonly static Dictionary<Type, object> expectedEventDict = new Dictionary<Type, object>
+        private static readonly Dictionary<Type, object> ExpectedEventDict = new Dictionary<Type, object>
         {
-            { typeof(StartOperationFailed) , startOperationFailedContent },
-            { typeof(StartOperationSucceeded) , startOperationSucceededContent },
+            { typeof(StartOperationFailed) , StartOperationFailedContent },
+            { typeof(StartOperationSucceeded) , StartOperationSucceededContent },
 
-            { typeof(WorkflowCreated) , workflowCreatedContent  },
-            { typeof(WorkflowFinished), workflowFinishedContent },
-            { typeof(WorkflowReady), workflowReadyContent },
-            { typeof(WorkflowWaiting), workflowWaitingContent },
-            { typeof(WorkflowChangedBusinessObject), workflowChangedBusinessObjectContent },
+            { typeof(WorkflowCreated) , WorkflowCreatedContent  },
+            { typeof(WorkflowFinished), WorkflowFinishedContent },
+            { typeof(WorkflowReady), WorkflowReadyContent },
+            { typeof(WorkflowWaiting), WorkflowWaitingContent },
+            { typeof(WorkflowChangedBusinessObject), WorkflowChangedBusinessObjectContent },
 
-            { typeof(BusinessObjectChanged), businessObjectChangedContent }
+            { typeof(BusinessObjectChanged), BusinessObjectChangedContent }
 
         };
 
         public static object GetExpectations(Type eventType)
         {
-            if (expectedEventDict.TryGetValue(eventType, out object content))
+            if (ExpectedEventDict.TryGetValue(eventType, out object content))
             {
                 return content;
             }

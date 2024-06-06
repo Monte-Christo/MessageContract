@@ -69,16 +69,6 @@
         "Type": "Scrubbing"
       },
       "Discriminator": "Master",
-      //"Data": {
-      //  "GainPartyId": "123",
-      //  "Issuer": true,
-      //  "PartyFreeCode20": "abc",
-      //  "Party": "GP_5",
-      //  "PartyName": "GP_5",
-      //  "ReviewDate": "2024-01-01T00:00:00Z",
-      //  "BBGCompany": "123",
-      //  "GainID": "GP_5"
-      //},
       "References": [
         {
           "Ref": {

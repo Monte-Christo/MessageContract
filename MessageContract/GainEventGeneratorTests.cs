@@ -5,12 +5,7 @@ namespace MessageContract.Tests;
 
 public class GainEventGeneratorTests : IDisposable
 {
-    private readonly PactVerifier _verifier;
-
-    public GainEventGeneratorTests()
-    {
-        _verifier = new PactVerifier("Gain");
-    }
+    private readonly PactVerifier _verifier = new("Gain");
 
     public void Dispose()
     {
@@ -44,7 +39,7 @@ public class GainEventGeneratorTests : IDisposable
 
                 if (!actualGroupByMessagesWithType.TryGetValue(messageType, out List<object>? actualGroupedMsgs))
                 {
-                    throw new Exception($"No matching expected message group found");
+                    throw new ArgumentException($"No matching expected message group found");
                 }
                 scenarios
                 .Add($"{eventType.Name} Message from Gain for the feed upload request", builder =>

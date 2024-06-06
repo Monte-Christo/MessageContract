@@ -50,15 +50,15 @@
     "type": "com.simcorp.gain.system.workflow_changed_business_object.v3",
     "data": {
       "BusinessObjectReference": {
-        "Model": "SimCorpDimension",
+        "Model": "SimCorp",
         "DataType": "Party",
         "Domain": "Golden",
-        "Id": 123,
+        "Id": "456",
         "Version": 1
       },
       "Title": "GP_5232",
       "Discriminator": "Master",
-      "WorkflowId": 123,
+      "WorkflowId": "123",
       "WorkflowType": "Business",
       "CorrelationId": "aa"
     }
@@ -87,19 +87,7 @@
           "Id": 12,
           "Type": "Scrubbing"
         },
-        "Title": "GP_5",
         "Discriminator": "Master",
-        "Version": 1,
-        //"Data": {
-        //  "GainPartyId": "123",
-        //  "Issuer": true,
-        //  "PartyFreeCode20": "abc",
-        //  "Party": "GP_5",
-        //  "PartyName": "GP_5",
-        //  "ReviewDate": "2024-01-01T00:00:00Z",
-        //  "BBGCompany": "123",
-        //  "GainID": "GP_5"
-        //},
         "References": [
           {
             "Ref": {

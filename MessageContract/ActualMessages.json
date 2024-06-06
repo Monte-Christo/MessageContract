@@ -381,7 +381,7 @@
       "Discriminator": "Master",
       "Version": 1,
       "Data": {
-        "abc": 123,
+        "abc": 123
       },
       "References": [
         {
